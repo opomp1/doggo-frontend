@@ -13,14 +13,13 @@ const Welcome = () => {
 
   const navigate = useNavigate();
   const isUserAuthenticated = useIsUserAuthenticated();
-  
-   if (isUserAuthenticated === undefined) {
-     return <Loader />;
-   } else if (isUserAuthenticated) {
-     navigate("/all-activity");
-     return <></>;
-   }
 
+  if (isUserAuthenticated === undefined) {
+    return <Loader />;
+  } else if (isUserAuthenticated) {
+    navigate("/all-activity");
+    return <></>;
+  }
 
   const showTermModal = () => {
     setIsTermModalShown(true);
@@ -38,7 +37,6 @@ const Welcome = () => {
     setIsPolicyModalShown(false);
   };
 
- 
   return (
     <div className="flex">
       <LeftPage />

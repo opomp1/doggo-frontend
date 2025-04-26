@@ -31,7 +31,6 @@ const Calendar = () => {
       }
     } catch (error) {
       console.error("Error from .get(api/activity/) => ", error);
-      
     }
   };
 
@@ -52,13 +51,13 @@ const Calendar = () => {
         </div>
       </header>
 
-      <main className="content bg-white mx-4 md:mx-7 lg:mx-6">
-        <section className="calendar__container bg-white rounded-2xl my-8 shadow-2xl">
+      <main className="content bg-white mx-4 overflow-auto">
+        <section className="calendar__container bg-white rounded-2xl my-8 xl:min-w-[800px] shadow-2xl place-self-center">
           {/* MUI CALENDAR */}
           <CalendarBody setDateByUser={setDateByUser} />
         </section>
 
-        <section className="mt-8 md:hidden flex flex-col gap-y-5 mb-10">
+        <section className="mt-8 flex flex-col gap-y-5 mb-10">
           <div className="flex justify-between items-end">
             <h2 className="text-xl font-semibold text-center">
               Today Activity

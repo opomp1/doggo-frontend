@@ -12,13 +12,11 @@ import login_Logo from "../../../public/login_Logo.png";
 import login_forLogout from "../../../public/login_forLogout.png";
 import Swal from "sweetalert2";
 
-
-
 const Login = () => {
   const [loading, setLoading] = useState(true);
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("demo@doggo.com");
+  const [password, setPassword] = useState("test1234");
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const { setUserData } = useGlobalContext();

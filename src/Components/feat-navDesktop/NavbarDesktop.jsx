@@ -63,6 +63,7 @@ const NavbarDesktop = ({ children }) => {
               width: rightDrawerWidth,
               flexShrink: 0,
               [`& .MuiDrawer-paper`]: {
+                overflow: "hidden",
                 width: rightDrawerWidth,
                 boxSizing: "border-box",
               },
